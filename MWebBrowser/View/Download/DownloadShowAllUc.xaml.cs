@@ -71,6 +71,7 @@ namespace MWebBrowser.View
             }
             catch (Exception ex)
             {
+                Debug.WriteLine($"发生异常：{ex}");
             }
         }
     }

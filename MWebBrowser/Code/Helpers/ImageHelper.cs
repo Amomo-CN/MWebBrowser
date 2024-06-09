@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Media;
@@ -43,6 +44,7 @@ namespace MWebBrowser.Code.Helpers
             }
             catch (Exception e)
             {
+                Debug.WriteLine($"发生异常：{e}");
                 return ImageHelper.DefaultFavicon;
             }
         }

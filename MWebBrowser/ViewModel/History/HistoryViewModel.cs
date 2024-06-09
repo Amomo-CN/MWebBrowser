@@ -5,6 +5,7 @@ using MWebBrowser.Code.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Windows;
 
 namespace MWebBrowser.ViewModel
@@ -76,6 +77,7 @@ namespace MWebBrowser.ViewModel
             }
             catch (Exception ex)
             {
+                Debug.WriteLine($"发生异常：{ex}");
             }
             foreach (var item in temp)
             {

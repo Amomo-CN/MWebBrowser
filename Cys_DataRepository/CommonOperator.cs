@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Text;
 
@@ -23,6 +24,7 @@ namespace Cys_DataRepository
             }
             catch (Exception ex)
             {
+                Debug.WriteLine($"发生异常：{ex}");
                 return false;
             }
         }
@@ -39,12 +41,14 @@ namespace Cys_DataRepository
             }
             catch (Exception ex)
             {
+                Debug.WriteLine($"发生异常：{ex}");
                 try
                 {
                     File.Delete(path);
                 }
                 catch (Exception e)
                 {
+                    Debug.WriteLine($"发生异常：{e}");
                 }
             }
             return t;

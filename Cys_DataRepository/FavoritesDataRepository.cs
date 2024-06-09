@@ -5,6 +5,7 @@ using Cys_Model;
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace Cys_DataRepository
 {
@@ -21,7 +22,7 @@ namespace Cys_DataRepository
             }
             catch (Exception ex)
             {
-
+                Debug.WriteLine($"发生异常：{ex}");
             }
         }
 

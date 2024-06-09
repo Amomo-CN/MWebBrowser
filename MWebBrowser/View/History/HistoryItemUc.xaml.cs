@@ -3,6 +3,7 @@
 using MWebBrowser.ViewModel;
 
 using System;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -48,7 +49,7 @@ namespace MWebBrowser.View.History
             }
             catch (Exception ex)
             {
-
+                Debug.WriteLine($"发生异常：{ex}");
             }
         }
 

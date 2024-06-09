@@ -16,6 +16,7 @@ using MWebBrowser.Code.Helpers;
 using MWebBrowser.ViewModel;
 
 using System;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -184,7 +185,7 @@ namespace MWebBrowser.View
             }
             catch (Exception ex)
             {
-
+                Debug.WriteLine($"发生异常：{ex}");
             }
         }
         public void RemoveItemCommand(object obj)
@@ -220,6 +221,7 @@ namespace MWebBrowser.View
             }
             catch (Exception ex)
             {
+                Debug.WriteLine($"发生异常：{ex}");
             }
         }
         private void ExecuteMenuFunction(string obj)

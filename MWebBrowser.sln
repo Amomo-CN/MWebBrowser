@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MWebBrowser", "MWebBrowser\MWebBrowser.csproj", "{7FF6E8EE-4310-43AC-8C99-DBDCDC33B57B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8E54DF10-5C9D-44B3-A0E6-F30C2268CC24} = {8E54DF10-5C9D-44B3-A0E6-F30C2268CC24}
+		{9B5FFB09-0D3D-4F87-A329-A0368D2C5574} = {9B5FFB09-0D3D-4F87-A329-A0368D2C5574}
+		{BC97E7AC-8891-4F92-92C0-64C91356C76A} = {BC97E7AC-8891-4F92-92C0-64C91356C76A}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cys_Resource", "Cys_Resource\Cys_Resource.csproj", "{BFA86333-1D51-4611-B199-BB9059047012}"
 EndProject

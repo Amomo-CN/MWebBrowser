@@ -9,6 +9,7 @@ using MWinFormsCore;
 using MWinFormsCore.CustomCef;
 
 using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 using System.Windows.Input;
 
@@ -104,7 +105,7 @@ namespace MWebBrowser.View
             }
             catch (Exception ex)
             {
-
+                Debug.WriteLine($"发生异常：{ex}");
             }
         }
 

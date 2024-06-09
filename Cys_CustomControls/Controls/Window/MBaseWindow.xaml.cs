@@ -1,6 +1,7 @@
 ﻿using Cys_Controls.Code;
 
 using System;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
@@ -323,7 +324,7 @@ namespace Cys_CustomControls.Controls
             }
             catch (Exception e)
             {
-
+                Debug.WriteLine($"发生异常：{e}");
             }
         }
         /// <summary>
@@ -345,7 +346,7 @@ namespace Cys_CustomControls.Controls
             }
             catch (Exception e)
             {
-
+                Debug.WriteLine($"发生异常：{e}");
             }
         }
 

@@ -8,6 +8,7 @@ using MWebBrowser.View;
 using MWebBrowser.ViewModel;
 
 using System;
+using System.Diagnostics;
 using System.Windows.Input;
 
 namespace MWebBrowser.Code.CefWebOperate
@@ -67,7 +68,7 @@ namespace MWebBrowser.Code.CefWebOperate
             }
             catch (Exception ex)
             {
-
+                Debug.WriteLine($"发生异常：{ex}");
             }
         }
 

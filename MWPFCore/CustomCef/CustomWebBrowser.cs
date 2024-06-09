@@ -6,6 +6,7 @@ using Cys_Controls.Code;
 using Cys_CustomControls.Controls;
 
 using System;
+using System.Diagnostics;
 using System.Windows.Input;
 
 namespace MWPFCore.Code.CustomCef
@@ -72,6 +73,7 @@ namespace MWPFCore.Code.CustomCef
             }
             catch (Exception ex)
             {
+                Debug.WriteLine($"发生异常：{ex}");
             }
             e.Handled = true;
         }
