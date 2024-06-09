@@ -1,9 +1,9 @@
 ﻿using Cys_Controls.Code;
+
 using System;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Media;
@@ -120,7 +120,7 @@ namespace Cys_CustomControls.Controls
 
         public virtual void HomeBtn_Click(object sender, RoutedEventArgs e)
         {
-          
+
         }
 
         #region 屏幕最大最小化

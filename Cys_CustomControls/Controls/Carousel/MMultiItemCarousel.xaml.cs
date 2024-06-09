@@ -1,4 +1,5 @@
 ﻿using Cys_Controls.Code;
+
 using System;
 using System.Collections.Generic;
 using System.Windows;
@@ -103,7 +104,7 @@ namespace Cys_CustomControls.Controls
 
             for (var i = 0; i < initCount; i++)
             {
-                var textBlock = new MTextBlock { Text = Items[i], VerticalAlignment = VerticalAlignment.Center, StyleType = StyleType.Success, Height = 35, Width = 120,CornerRadius = new CornerRadius(10)};
+                var textBlock = new MTextBlock { Text = Items[i], VerticalAlignment = VerticalAlignment.Center, StyleType = StyleType.Success, Height = 35, Width = 120, CornerRadius = new CornerRadius(10) };
                 Grid.SetRow(textBlock, i);
                 _courseMessage.Add(textBlock);
                 _partContainer.Children.Add(textBlock);

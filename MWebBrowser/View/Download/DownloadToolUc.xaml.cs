@@ -1,11 +1,14 @@
 ﻿using CefSharp;
+
+using Cys_Common;
+
 using MWebBrowser.ViewModel;
+
 using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
-using Cys_Common;
 
 namespace MWebBrowser.View
 {
@@ -15,7 +18,7 @@ namespace MWebBrowser.View
     public partial class DownloadToolUc : UserControl
     {
         public Action ShowDownloadTabEvent;
-        private readonly Dictionary<int,DownloadToolItemViewModel> _downloadDict;
+        private readonly Dictionary<int, DownloadToolItemViewModel> _downloadDict;
 
         private Storyboard _displayToolStoryboard;
         private Storyboard _hideToolStoryboard;
@@ -49,7 +52,7 @@ namespace MWebBrowser.View
                     FileName = downloadItem.SuggestedFileName,
                 };
                 _downloadDict.Add(downloadItem.Id, viewModel);
-                
+
                 this.Dispatcher.Invoke(new Action(() =>
                 {
                     //this.Visibility = Visibility.Visible;

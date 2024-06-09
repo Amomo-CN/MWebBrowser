@@ -1,10 +1,11 @@
 ﻿using CefSharp;
+
 using System.Security.Cryptography.X509Certificates;
 using System.Windows;
 
 namespace MWPFCore.Code.CustomCef
 {
-    public class CustomRequestHandler: IRequestHandler
+    public class CustomRequestHandler : IRequestHandler
     {
         public bool OnBeforeBrowse(IWebBrowser chromiumWebBrowser, IBrowser browser, IFrame frame, IRequest request, bool userGesture,
             bool isRedirect)
@@ -68,12 +69,12 @@ namespace MWPFCore.Code.CustomCef
 
         public void OnRenderViewReady(IWebBrowser chromiumWebBrowser, IBrowser browser)
         {
-           
+
         }
 
-        public void OnRenderProcessTerminated(IWebBrowser chromiumWebBrowser, IBrowser browser, CefTerminationStatus status)
+        public void OnRenderProcessTerminated(IWebBrowser chromiumWebBrowser, IBrowser browser, CefTerminationStatus status, int exitCode, string message)
         {
-           
+            // 在这里添加您的代码
         }
     }
 }

@@ -1,13 +1,16 @@
 ﻿using CefSharp;
 using CefSharp.Wpf;
+
 using Cys_Controls.Code;
+
 using Cys_CustomControls.Controls;
+
 using System;
 using System.Windows.Input;
 
 namespace MWPFCore.Code.CustomCef
 {
-    public class CustomWebBrowser: ChromiumWebBrowser
+    public class CustomWebBrowser : ChromiumWebBrowser
     {
         public Action<bool, DownloadItem> DownloadCallBackEvent;
 

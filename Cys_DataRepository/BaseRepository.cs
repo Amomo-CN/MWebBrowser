@@ -1,7 +1,9 @@
 ﻿using Cys_Model.DataBase;
 using Cys_Model.Model;
+
 using SqlSugar;
 using SqlSugar.Extensions;
+
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -10,7 +12,7 @@ namespace Cys_DataRepository
 {
     public static class BaseRepository<T> where T : class, new()
     {
-        private static readonly ISqlSugarClient _db; 
+        private static readonly ISqlSugarClient _db;
         static BaseRepository()
         {
             _db = new DbContext().Db;

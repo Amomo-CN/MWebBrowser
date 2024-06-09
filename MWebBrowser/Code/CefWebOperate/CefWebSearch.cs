@@ -1,7 +1,9 @@
 ﻿using CefSharp;
+
 using MWebBrowser.Code.Helpers;
 using MWebBrowser.View;
 using MWebBrowser.ViewModel;
+
 using System.Windows.Input;
 
 namespace MWebBrowser.Code.CefWebOperate

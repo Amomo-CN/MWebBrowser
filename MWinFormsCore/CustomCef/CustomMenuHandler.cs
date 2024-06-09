@@ -1,4 +1,5 @@
 ﻿using CefSharp;
+
 using MWinFormsCore.Code;
 
 namespace MWinFormsCore.CustomCef
@@ -18,7 +19,7 @@ namespace MWinFormsCore.CustomCef
         {
             if (chromiumWebBrowser is CustomWebBrowser cefWebBrowser)
             {
-                var parent =  UserControlHelper.FindParent<BrowserUserControl>(cefWebBrowser);
+                var parent = UserControlHelper.FindParent<BrowserUserControl>(cefWebBrowser);
                 if ((int)commandId == ShowDevTools)
                 {
                     parent.Invoke(() => { parent.ShowDevToolsDocked(); });

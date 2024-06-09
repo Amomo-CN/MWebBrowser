@@ -18,7 +18,7 @@ namespace MWinFormsCore.CustomCef
 
         public void OnAfterCreated(IWebBrowser chromiumWebBrowser, IBrowser browser)
         {
-           
+
         }
 
         public bool DoClose(IWebBrowser chromiumWebBrowser, IBrowser browser)
@@ -28,7 +28,7 @@ namespace MWinFormsCore.CustomCef
 
         public void OnBeforeClose(IWebBrowser chromiumWebBrowser, IBrowser browser)
         {
-           
+
         }
     }
 }

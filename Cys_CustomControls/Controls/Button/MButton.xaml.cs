@@ -1,4 +1,5 @@
 ﻿using Cys_Controls.Code;
+
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -129,9 +130,9 @@ namespace Cys_CustomControls.Controls
         /// </summary>
         private void InitResourceData()
         {
-            this.SetResourceReference(ForegroundProperty,StyleType == StyleType.Default ? "ColorBrush.FontDefaultColor" : "ColorBrush.FontPrimaryColor");
-            this.SetResourceReference(BackgroundProperty,$"ColorBrush.{StyleType}BackgroundColor");
-            this.SetResourceReference(BorderBrushProperty,$"ColorBrush.{StyleType}BorderBrushColor");
+            this.SetResourceReference(ForegroundProperty, StyleType == StyleType.Default ? "ColorBrush.FontDefaultColor" : "ColorBrush.FontPrimaryColor");
+            this.SetResourceReference(BackgroundProperty, $"ColorBrush.{StyleType}BackgroundColor");
+            this.SetResourceReference(BorderBrushProperty, $"ColorBrush.{StyleType}BorderBrushColor");
             this.SetResourceReference(IsMouseBackgroundProperty, $"ColorBrush.{StyleType}BackgroundOverColor");
             this.SetResourceReference(IsPressedBackgroundProperty, $"ColorBrush.{StyleType}BackgroundPressColor");
         }

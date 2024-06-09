@@ -5,7 +5,7 @@ namespace Cys_Model.DataBase
 {
     public static class DbSeed
     {
-        private static readonly DbContext _context; 
+        private static readonly DbContext _context;
         static DbSeed()
         {
             _context = new DbContext();
@@ -17,7 +17,8 @@ namespace Cys_Model.DataBase
 
             //创建表，反射获取指定数据表
             var modelTypes = from table in Assembly.GetExecutingAssembly().GetTypes()
-                where table.IsClass && table.Namespace == "Cys_Model.Tables" select table;
+                             where table.IsClass && table.Namespace == "Cys_Model.Tables"
+                             select table;
 
             foreach (var t in modelTypes.ToList())
             {

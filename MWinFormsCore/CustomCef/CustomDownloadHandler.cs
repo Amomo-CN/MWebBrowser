@@ -1,4 +1,5 @@
 ﻿using CefSharp;
+
 using Cys_Common.Code.Configure;
 
 namespace MWinFormsCore.CustomCef
@@ -17,14 +18,17 @@ namespace MWinFormsCore.CustomCef
             return true;
         }
 
-        public void OnBeforeDownload(IWebBrowser chromiumWebBrowser, IBrowser browser, DownloadItem downloadItem,
-            IBeforeDownloadCallback callback)
+        public bool OnBeforeDownload(IWebBrowser chromiumWebBrowser, IBrowser browser, DownloadItem downloadItem,
+       IBeforeDownloadCallback callback)
         {
-            if (callback.IsDisposed) return;
+            if (callback.IsDisposed) return false;
             _downloadCallBackEvent?.Invoke(false, downloadItem);
             downloadItem.IsInProgress = true;
             var path = GetDownloadFullPath(downloadItem.SuggestedFileName);
             callback.Continue(path, false);
+
+            // 根据你的业务逻辑决定是否允许下载，这里示例为允许
+            return true;
         }
 
 

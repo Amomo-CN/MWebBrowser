@@ -1,5 +1,7 @@
 ﻿using CefSharp;
+
 using Cys_Common.Code.Configure;
+
 using System;
 
 namespace MWPFCore.Code.CustomCef
@@ -18,15 +20,16 @@ namespace MWPFCore.Code.CustomCef
             return true;
         }
 
-        public void OnBeforeDownload(IWebBrowser chromiumWebBrowser, IBrowser browser, DownloadItem downloadItem,
-            IBeforeDownloadCallback callback)
+        public bool OnBeforeDownload(IWebBrowser chromiumWebBrowser, IBrowser browser, DownloadItem downloadItem, IBeforeDownloadCallback callback)
         {
-            if (callback.IsDisposed) return;
+            if (callback.IsDisposed) return false;
             _downloadCallBackEvent?.Invoke(false, downloadItem);
             downloadItem.IsInProgress = true;
             var path = GetDownloadFullPath(downloadItem.SuggestedFileName);
             callback.Continue(path, false);
+            return true;
         }
+
 
 
         public void OnDownloadUpdated(IWebBrowser chromiumWebBrowser, IBrowser browser, DownloadItem downloadItem,

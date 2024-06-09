@@ -1,5 +1,7 @@
 ﻿using Cys_Controls.Code;
+
 using MWebBrowser.ViewModel;
+
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -40,13 +42,13 @@ namespace MWebBrowser.View.History
         {
             if (!(this.DataContext is HistoryItemViewModel viewModel)) return;
             try
-            { 
-               var uc = ControlHelper.FindVisualChild<WebTabControlUc>(Application.Current.MainWindow);
-               uc.TabItemAdd(viewModel.Url);
+            {
+                var uc = ControlHelper.FindVisualChild<WebTabControlUc>(Application.Current.MainWindow);
+                uc.TabItemAdd(viewModel.Url);
             }
             catch (Exception ex)
             {
-            
+
             }
         }
 

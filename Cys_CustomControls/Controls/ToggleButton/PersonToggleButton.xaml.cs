@@ -48,7 +48,7 @@ namespace Cys_CustomControls.Controls
             DependencyProperty.Register("ButtonImage", typeof(ImageSource), typeof(PersonToggleButton));
         public ImageSource ButtonImage
         {
-            get => (ImageSource)GetValue(ButtonImageProperty); 
+            get => (ImageSource)GetValue(ButtonImageProperty);
             set => SetValue(ButtonImageProperty, value);
         }
         #endregion ==ButtonImage==

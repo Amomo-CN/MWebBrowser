@@ -112,7 +112,7 @@ namespace Cys_CustomControls.Controls
             DependencyProperty.Register("ImagesLists", typeof(List<BitmapImage>), typeof(MCarousel));
         public List<BitmapImage> ImagesLists
         {
-            get => (List<BitmapImage>)GetValue(ImagesListsProperty); 
+            get => (List<BitmapImage>)GetValue(ImagesListsProperty);
             set => SetValue(ImagesListsProperty, value);
         }
 
@@ -227,7 +227,7 @@ namespace Cys_CustomControls.Controls
                     return;
                 }
             });
-           
+
             Dispatcher.Invoke(() =>
             {
                 _auto = true;

@@ -16,6 +16,6 @@ namespace Cys_Model
         /// <summary>
         /// 层级
         /// </summary>
-        public int Level { get; set; } 
+        public int Level { get; set; }
     }
 }

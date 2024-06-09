@@ -1,6 +1,8 @@
 ﻿using Cys_Common;
 using Cys_Common.Code.Configure;
+
 using MWebBrowser.ViewModel;
+
 using System;
 using System.Diagnostics;
 using System.Linq;
@@ -35,7 +37,7 @@ namespace MWebBrowser.View
                     Url = info.Url,
                     FilePath = info.FilePath,
                 };
-                var uc = new DownloadShowAllItemUc {DataContext = viewModel,RemoveFileEvent = RemoveFile};
+                var uc = new DownloadShowAllItemUc { DataContext = viewModel, RemoveFileEvent = RemoveFile };
                 FileList.Children.Add(uc);
             }
         }

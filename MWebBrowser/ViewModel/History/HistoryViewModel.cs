@@ -1,10 +1,11 @@
 ﻿using Cys_Services;
+
+using MWebBrowser.Code.Helpers;
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Threading.Tasks;
 using System.Windows;
-using MWebBrowser.Code.Helpers;
 
 namespace MWebBrowser.ViewModel
 {

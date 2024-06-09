@@ -1,9 +1,10 @@
-﻿using System;
-using Cys_Common.Enum;
+﻿using Cys_Common.Enum;
+
+using System;
 
 namespace Cys_DataRepository
 {
-    public  static class FileDataPath
+    public static class FileDataPath
     {
         public static string GetFilePath(DataFileType type)
         {

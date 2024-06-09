@@ -1,7 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using Cys_Common;
+﻿using Cys_Common;
 using Cys_Common.Enum;
+
+using System;
+using System.Collections.Generic;
 
 namespace Cys_DataRepository
 {
@@ -18,7 +19,7 @@ namespace Cys_DataRepository
             }
             catch (Exception ex)
             {
-               
+
             }
         }
 
@@ -27,7 +28,7 @@ namespace Cys_DataRepository
             var fileName = FileDataPath.GetFilePath(DataFileType.Download);
             var setting = CommonOperator.GetDataJson<DownloadSetting>(fileName);
             setting ??= new DownloadSetting();
-            setting.DownloadItemInfos??= new List<DownloadItemInfo>();
+            setting.DownloadItemInfos ??= new List<DownloadItemInfo>();
             return setting;
         }
     }

@@ -63,7 +63,7 @@ namespace Cys_CustomControls.Controls
         /// </summary>
         public ImageSource Icon
         {
-            get => (ImageSource) GetValue(IconProperty);
+            get => (ImageSource)GetValue(IconProperty);
             set => SetValue(IconProperty, value);
         }
 
@@ -80,11 +80,11 @@ namespace Cys_CustomControls.Controls
         /// </summary>
         public Brush IconBackground
         {
-            get => (Brush) GetValue(IconBackgroundProperty);
+            get => (Brush)GetValue(IconBackgroundProperty);
             set => SetValue(IconBackgroundProperty, value);
         }
 
-#endregion
+        #endregion
 
         #endregion
 

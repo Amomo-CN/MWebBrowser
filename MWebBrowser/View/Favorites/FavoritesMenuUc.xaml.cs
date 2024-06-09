@@ -1,9 +1,14 @@
 ﻿using Cys_Common;
+
 using Cys_Controls.Code;
+
 using Cys_CustomControls.Controls;
+
 using Cys_Model;
+
 using MWebBrowser.Code.Helpers;
 using MWebBrowser.ViewModel;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -65,7 +70,7 @@ namespace MWebBrowser.View
         private void AddTreeViewItems(MTreeViewItem parent, TreeNode treeNode, bool isRoot)
         {
             double left = treeNode.Level * 10;
-            var treeViewItem = GetNewFavoritesItem(treeNode,left);
+            var treeViewItem = GetNewFavoritesItem(treeNode, left);
             if (treeNode.ChildNodes.Count <= 0)
             {
                 if (treeNode.Type == 0)
@@ -156,7 +161,7 @@ namespace MWebBrowser.View
         {
             var model = GetWebUrlEvent?.Invoke();
             if (null == model) return;
-           
+
             if (sender is Button)
             {
                 if (!(FavoritesTree.Items[0] is MTreeViewItem item)) return;
@@ -301,7 +306,7 @@ namespace MWebBrowser.View
             {
                 _currentRightItem.IsEdit = false;
                 _currentRightItem.Header = _currentRightItem.EditText;
-               
+
                 if (!GlobalInfo.FavoritesSetting.FavoritesInfos.Exists(x => x.NodeId == _currentRightItem.NodeId)) return;
                 var treeNode = GlobalInfo.FavoritesSetting.FavoritesInfos.First(x => x.NodeId == _currentRightItem.NodeId);
                 treeNode.NodeName = _currentRightItem.EditText;

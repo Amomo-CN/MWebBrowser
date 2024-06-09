@@ -1,9 +1,8 @@
-﻿using System;
+﻿using Cys_Controls.Code;
+
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
-using System.Windows.Media;
-using Cys_Controls.Code;
 
 // ReSharper disable once CheckNamespace
 namespace Cys_CustomControls.Controls

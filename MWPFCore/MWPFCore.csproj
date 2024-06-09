@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFramework>net7.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows10.0.22621.0</TargetFramework>
 	<Platforms>AnyCPU;x86;x64</Platforms>
 	<CefSharpAnyCpuSupport>true</CefSharpAnyCpuSupport>
     <Nullable>enable</Nullable>
@@ -11,7 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CefSharp.Wpf.NETCore" Version="120.1.110" />
+    <PackageReference Include="CefSharp.Wpf.NETCore" Version="125.0.210" />
   </ItemGroup>
 
   <ItemGroup>

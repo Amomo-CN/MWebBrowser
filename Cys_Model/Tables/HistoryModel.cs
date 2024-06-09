@@ -1,5 +1,6 @@
-﻿using System;
-using SqlSugar;
+﻿using SqlSugar;
+
+using System;
 
 namespace Cys_Model.Tables
 {

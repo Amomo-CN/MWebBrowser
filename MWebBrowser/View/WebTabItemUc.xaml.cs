@@ -1,11 +1,14 @@
 ﻿using CefSharp;
+
 using Cys_Controls.Code;
+
 using MWebBrowser.Code.Helpers;
 using MWebBrowser.ViewModel;
+
 using MWinFormsCore;
 using MWinFormsCore.CustomCef;
+
 using System;
-using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
 
@@ -77,12 +80,12 @@ namespace MWebBrowser.View
             formsHost.Child = browserUserControl;
             CefWebBrowser.IsBrowserInitializedChanged += CefWebBrowser_IsBrowserInitializedChanged;
             this.CefWebBrowser.TitleChanged += CefWebBrowser_TitleChanged;
-            if(this.CefWebBrowser.KeyboardHandler is CustomKeyboardHandler handler)
+            if (this.CefWebBrowser.KeyboardHandler is CustomKeyboardHandler handler)
             {
                 handler.KeyboardCallBack += CefWebBrowser_PreviewKeyDown;
             }
 
-           // this.CefWebBrowser.ZoomLevelIncrement = _zoomLevelIncrement;
+            // this.CefWebBrowser.ZoomLevelIncrement = _zoomLevelIncrement;
         }
 
         private void CefWebBrowser_IsBrowserInitializedChanged(object sender, EventArgs e)

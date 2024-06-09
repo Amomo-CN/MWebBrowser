@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows10.0.22621.0</TargetFramework>
     <UseWPF>true</UseWPF>
 	<UseWindowsForms>true</UseWindowsForms>
     <Platforms>AnyCPU;x86;x64</Platforms>
@@ -19,10 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
-	<PackageReference Include="CefSharp.WinForms.NETCore" Version="120.1.110" />
-	<PackageReference Include="log4net" Version="2.0.15" />
-	<PackageReference Include="Microsoft.Windows.Compatibility" Version="8.0.0" />
-	<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+	<PackageReference Include="CefSharp.WinForms.NETCore" Version="125.0.210" />
+	<PackageReference Include="log4net" Version="2.0.17" />
+	<PackageReference Include="Microsoft.Windows.Compatibility" Version="9.0.0-preview.4.24267.11" />
+	<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cys_Common\Cys_Common.csproj" />

@@ -1,5 +1,4 @@
 ﻿using CefSharp;
-using System;
 
 namespace MWPFCore.Code.CustomCef
 {
@@ -13,7 +12,7 @@ namespace MWPFCore.Code.CustomCef
             {
                 //Cef.UIThreadTaskFactory.StartNew(() =>
                 //{
-                    
+
                 //});
                 webBrowser.OpenNewTab(targetUrl);
             }
@@ -23,7 +22,7 @@ namespace MWPFCore.Code.CustomCef
 
         public void OnAfterCreated(IWebBrowser chromiumWebBrowser, IBrowser browser)
         {
-           
+
         }
 
         public bool DoClose(IWebBrowser chromiumWebBrowser, IBrowser browser)
@@ -33,7 +32,7 @@ namespace MWPFCore.Code.CustomCef
 
         public void OnBeforeClose(IWebBrowser chromiumWebBrowser, IBrowser browser)
         {
-           
+
         }
     }
 }

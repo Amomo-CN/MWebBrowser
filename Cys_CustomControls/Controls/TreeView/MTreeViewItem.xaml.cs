@@ -1,8 +1,9 @@
-﻿using System.Windows;
+﻿using Cys_Controls.Code;
+
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
-using Cys_Controls.Code;
 
 // ReSharper disable once CheckNamespace
 namespace Cys_CustomControls.Controls
@@ -114,7 +115,7 @@ namespace Cys_CustomControls.Controls
             if (!item.IsEdit) return;
             var textBox = ControlHelper.FindVisualChild<TextBox>(d);
             textBox.Focus();//不好用后期处理
-            FocusManager.SetFocusedElement(d,textBox);//不好用后期处理
+            FocusManager.SetFocusedElement(d, textBox);//不好用后期处理
         }
 
         public string EditText

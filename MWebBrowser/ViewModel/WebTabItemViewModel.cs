@@ -1,9 +1,10 @@
 ﻿using MWebBrowser.Code.Helpers;
+
 using System.Windows.Media;
 
 namespace MWebBrowser.ViewModel
 {
-    public class WebTabItemViewModel: BaseViewModel
+    public class WebTabItemViewModel : BaseViewModel
     {
         private string _title = "新标签页";
         public string Title { get => _title; set { _title = value; OnPropertyChanged("Title"); } }

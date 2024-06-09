@@ -1,4 +1,5 @@
 ﻿using MWebBrowser.Code.Helpers;
+
 using System;
 using System.Windows;
 using System.Windows.Media;
@@ -40,7 +41,7 @@ namespace MWebBrowser.ViewModel
             get => _isGroup;
             set { _isGroup = value; OnPropertyChanged("IsGroup"); }
         }
-        
+
 
         private string _title;
         /// <summary>

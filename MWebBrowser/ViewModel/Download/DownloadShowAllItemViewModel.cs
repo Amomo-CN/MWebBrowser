@@ -1,7 +1,4 @@
-﻿using System.Windows.Input;
-using Cys_Controls.Code;
-
-namespace MWebBrowser.ViewModel
+﻿namespace MWebBrowser.ViewModel
 {
     public class DownloadShowAllItemViewModel : BaseViewModel
     {

@@ -2,12 +2,12 @@
 using CefSharp.WinForms;
 using CefSharp.WinForms.Experimental;
 using CefSharp.WinForms.Handler;
-using MWinFormsCore.CustomCef;
+
 using System.Runtime.InteropServices;
 
 namespace MWinFormsCore.CustomCef
 {
-    public class CustomWebBrowser: ChromiumWebBrowser
+    public class CustomWebBrowser : ChromiumWebBrowser
     {
         public Action<bool, DownloadItem> DownloadCallBackEvent;
         public Action AfterLoadEvent;
@@ -138,7 +138,7 @@ namespace MWinFormsCore.CustomCef
                                     PostMessage(topLevelWindowHandle, WM_NCLBUTTONDOWN, IntPtr.Zero, IntPtr.Zero);
                                 }
 
-                                if(message.Msg == WM_MOUSEWHEEL)
+                                if (message.Msg == WM_MOUSEWHEEL)
                                 {
                                     int rawDelta = (int)message.WParam.ToInt64();
                                     int delta = rawDelta >> 16; // 使用右移16位来获取高位字
