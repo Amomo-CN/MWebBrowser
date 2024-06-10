@@ -25,6 +25,7 @@ namespace MWinFormsCore.CustomCef
             this.MenuHandler = new CustomMenuHandler();
             this.KeyboardHandler = new CustomKeyboardHandler();
             InitLifeSpanHandler();
+
         }
 
         public void InitLifeSpanHandler()
@@ -85,6 +86,18 @@ namespace MWinFormsCore.CustomCef
             });
 
             SetupMessageInterceptor();
+            EnsureLanguageSettings();
+        }
+
+        private void EnsureLanguageSettings()
+        {
+            if (!this.IsBrowserInitialized) return;
+            Cef.UIThreadTaskFactory.StartNew(() =>
+            {
+                string error = "";
+                var requestContext = this.GetBrowser().GetHost().RequestContext;
+                requestContext.SetPreference("intl.accept_languages", "zh-CN", out error);
+            });
         }
 
         private void CustomWebBrowser_LoadingStateChanged(object sender, LoadingStateChangedEventArgs e)
