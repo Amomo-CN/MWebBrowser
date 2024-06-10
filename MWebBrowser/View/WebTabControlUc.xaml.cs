@@ -57,7 +57,10 @@ namespace MWebBrowser.View
                 return;
             InitCommand();
             InitData();
-            TabItemAdd("https://www.cnblogs.com/mchao/p/14086441.html");
+            TabItemAdd("http://192.168.100.216:8081/U9C/mvc/main/index");
+            TabItemAdd("http://192.168.10.173:8088/Login.aspx?LastUrl=%2F");
+            TabItemAdd("http://192.168.10.209:8080/webroot/decision/login");
+            TabItemAdd("http://192.168.10.209:8080/webroot/decision/v10/entry/access/734b3268-55f8-4e48-9c03-0fa78a8fd17d?width=2160&height=1078");
         }
 
         #region InitData
@@ -158,36 +161,44 @@ namespace MWebBrowser.View
         /// 添加新的TabItem
         /// </summary>
         /// <param name="obj"></param>
-        public void TabItemAdd(object obj)
+        public void TabItemAdd(object obj)  // 定义一个方法，用于添加新的标签页
         {
             try
             {
-                DispatcherHelper.UIDispatcher.Invoke(() =>
+               
+                DispatcherHelper.UIDispatcher.Invoke(() => // 使用 DispatcherHelper 在主线程上执行 UI 更新
                 {
-                    var uc = new WebTabItemUc { ViewModel = { CurrentUrl = obj?.ToString() } };
-                    uc.SetCurrentEvent += SetCurrentSelectedInfo;
-                    uc.CefWebBrowser.DownloadCallBackEvent += DownloadTool.DownloadFile;
-                    uc.CefWebBrowser.AfterLoadEvent += AfterLoad;
-                    uc.CefWebBrowser.OpenNewTabEvent += TabItemAdd;
-                    uc.CefWebBrowser.MouseWheelEvent += WebMouseWheel;
-                    #region TabItem
+                    var uc = new WebTabItemUc { ViewModel = { CurrentUrl = obj?.ToString() } };  // 创建新的 WebTabItemUc 实例，并设置当前网址
+                    uc.SetCurrentEvent += SetCurrentSelectedInfo;  // 绑定事件，用于设置当前选中的信息
+                    uc.CefWebBrowser.DownloadCallBackEvent += DownloadTool.DownloadFile;  // 绑定下载回调事件
+                    uc.CefWebBrowser.AfterLoadEvent += AfterLoad;  // 绑定加载完成后的事件
+                    uc.CefWebBrowser.OpenNewTabEvent += TabItemAdd;  // 绑定打开新标签页的事件
+                    uc.CefWebBrowser.MouseWheelEvent += WebMouseWheel;  // 绑定鼠标滚轮事件
 
-                    var item = new TabItem { Content = uc };
-                    var titleBind = new Binding { Source = uc.DataContext, Path = new PropertyPath("Title") };
-                    item.SetBinding(HeaderedContentControl.HeaderProperty, titleBind);
-                    var faviconBind = new Binding { Source = uc.DataContext, Path = new PropertyPath("Favicon") };
-                    item.SetBinding(AttachedPropertyClass.ImageSourceProperty, faviconBind);
-                    WebTabControl.Items.Add(item);
-                    WebTabControl.SelectedItem = item;
-                    WebTabControl.SetHeaderPanelWidth();
+                    
+                    uc.CefWebBrowser.Load(obj?.ToString());// 开始加载新标签页的内容
+
+                    var item = new TabItem { Content = uc };  // 创建新的 TabItem，并将内容设置为 uc
+                    var titleBind = new Binding { Source = uc.DataContext, Path = new PropertyPath("Title") };  // 绑定标题
+                    item.SetBinding(HeaderedContentControl.HeaderProperty, titleBind);  // 将标题绑定到 TabItem 的 Header 属性
+                    var faviconBind = new Binding { Source = uc.DataContext, Path = new PropertyPath("Favicon") };  // 绑定图标
+                    item.SetBinding(AttachedPropertyClass.ImageSourceProperty, faviconBind);  // 将图标绑定到自定义的 AttachedProperty
+
+                    
+                    WebTabControl.Items.Add(item);// 将新的标签项添加到 TabControl
+
+
+                    WebTabControl.UpdateLayout();// 强制更新布局，确保内容立即显示
+                    WebTabControl.SelectedItem = item;  // 将新的标签页设为选中状态
+                    WebTabControl.SetHeaderPanelWidth();  // 设置标签页头部面板的宽度
                 });
-                #endregion
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"发生异常：{ex}");
+                Debug.WriteLine($"发生异常：{ex}");  // 捕获异常并输出调试信息
             }
         }
+
         public void RemoveItemCommand(object obj)
         {
             if (obj is TabItem item)

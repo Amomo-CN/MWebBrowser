@@ -39,7 +39,8 @@ namespace MWebBrowser.View
 
         private void FavoritesBarUc_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
-            if (this.IsInDesignMode()) return;
+            if (this.IsInDesignMode())
+                return;
             GetFavoritesInfo();
         }
 

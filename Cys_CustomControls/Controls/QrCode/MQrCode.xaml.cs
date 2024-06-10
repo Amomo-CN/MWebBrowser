@@ -95,12 +95,12 @@ namespace Cys_CustomControls.Controls
 
 
         #region == LogoWidth ==
-        public  static readonly DependencyProperty LogoWidthProperty = DependencyProperty.Register("LogoWidth", typeof(double), typeof(MQrCode),
+        public static readonly DependencyProperty LogoWidthProperty = DependencyProperty.Register("LogoWidth", typeof(double), typeof(MQrCode),
             new PropertyMetadata());
         /// <summary>
         /// LogoWidth
         /// </summary>
-        public  double LogoWidth
+        public double LogoWidth
         {
             get => (double)GetValue(LogoWidthProperty);
             set => SetValue(LogoWidthProperty, value);
